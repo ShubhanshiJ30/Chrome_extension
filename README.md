@@ -1,4 +1,4 @@
-# MAANG Problem Tracker – Chrome Extension
+# Codeforces Problem Tracker – Chrome Extension
 
 This is a Chrome extension to bookmark coding problems from codeforces.
 
