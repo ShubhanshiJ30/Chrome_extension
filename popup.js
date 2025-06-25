@@ -1,4 +1,4 @@
-const CF_PROBLEM_KEY = "CF_PROBLEM_KEY";
+const AZ_PROBLEM_KEY = "CF_PROBLEM_KEY";
 
 const assetsURLMap = {
     "play": chrome.runtime.getURL("assets/play.png"),
