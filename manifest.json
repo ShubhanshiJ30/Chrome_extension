@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "CF Problem Tracker",
+  "version": "0.1",
+  "author": "Shubhanshi Jaiswal",
+  "description": "A Chrome Extension that helps us track problems on CodeForces",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": ["https://codeforces.com/*"],
+  "content_scripts": [
+  {
+    "matches": [
+      "https://codeforces.com/problemset/problem/*"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }
+],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources" : [
+    {
+      "resources": [
+        "assets/plus.png",
+        "assets/delete.png",
+        "assets/play.png",
+        "assets/tick.png"
+      ],
+      "matches" : ["https://codeforces.com/*"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "24": "assets/ext-icon.png",
+      "32": "assets/ext-icon.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "CF Problem Tracker"
+  }
+}
